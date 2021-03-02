@@ -1,18 +1,7 @@
-def test(n):
-    i = 1
-    while i * (i + 1) * (i + 2) < n:
-        i = i + 1
-    if i * (i+1) * (i+2) == n:
-        print('O numero {} é triangular'.format(n))
-    else:
-        print('O numero {} não é trinagular'.format(n))
+if __name__ == '__main__':
+    x = int(input())
+    y = int(input())
+    z = int(input())
+    n = int(input())
 
-
-while True:
-    try:
-        pergunta = int(input("Digite um numero: "))
-        break
-    except ValueError:
-        print('Digite um numero inteiro!')
-test(pergunta)
-
+print([[a, b, c] for a in range(x + 1) for b in range(y + 1) for c in range(z + 1) if a + b + c != n])
